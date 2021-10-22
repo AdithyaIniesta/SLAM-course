@@ -5,3 +5,6 @@
 4. The observation model uses both Laser and Radar measurements for correcting the prediction of the filter. 
 5. We performed the comparison of filter performance with and without sensor fusion. 
 
+# Instructions to Run the code
+g++ main.cpp kalman.cpp tracking.cpp measurement.cpp 
+./a.out
