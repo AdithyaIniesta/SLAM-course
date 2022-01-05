@@ -7,13 +7,13 @@
 #include "tracking.h"
 
 // set sensor marcos to "0" to diable them 
-#define DISABLE_LASER 1
+#define DISABLE_LASER 0
 #define DISABLE_RADAR 1
 
 int main(){
 
     // read input file 
-    std::ifstream sensor_file ("/home/adithyainiesta/Udacity/EKF/obj_pose-laser-radar-synthetic-input.txt");
+    std::ifstream sensor_file ("/home/adithyainiesta/Documents/State-Estimation-Techniques/sensor_measurements/obj_pose-laser-radar-synthetic-input.txt");
     if (!sensor_file.is_open()){
         std::cout << "Cannot open the input file\n";
     }

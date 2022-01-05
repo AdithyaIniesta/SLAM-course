@@ -2,8 +2,8 @@
 
 tracking::tracking(){
     
-    outputFile.open("/home/adithyainiesta/Udacity/EKF/output.csv");
-    outputFile << "x1, y1, x2, y2, x3, y3\n";
+    outputFile.open("/home/adithyainiesta/Documents/State-Estimation-Techniques/output/output.csv");
+    outputFile << "x_1, y_1, x_2, y_2, x_3, y_3\n";
     kf.x = Eigen::MatrixXd(4,1);
     
     kf.H = Eigen::MatrixXd(2,4);
