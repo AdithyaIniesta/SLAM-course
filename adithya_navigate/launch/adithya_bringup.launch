@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<launch>
-	<node pkg="adithya_navigate" type="navigate_to_goals.py" name="navigate_to_goals" output="screen" >
-		<rosparam param="p_seq">[2,2.5,0, 1.8,-2.5,0, -4,-1,0]</rosparam>
-		<rosparam param="yea_seq">[90, 0, 180]</rosparam>
-	</node>
-
-</launch>
