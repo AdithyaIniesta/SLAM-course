@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ukf.h
+cmath
+-
+eigen3/Eigen/Dense
+-
+eigen3/Eigen/Cholesky
+-
+iostream
+-
+algorithm
+-
+
+/home/adithyainiesta/Desktop/SLAM-course-/Unscented Transform/C++/src/main.cpp
+ukf.h
+/home/adithyainiesta/Desktop/SLAM-course-/Unscented Transform/C++/src/ukf.h
+
