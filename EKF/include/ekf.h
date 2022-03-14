@@ -14,7 +14,7 @@ public:
     Eigen::MatrixXd F;
     Eigen::MatrixXd R;
     Eigen::MatrixXd Q;
-    Eigen::MatrixXd B;
+    Eigen::MatrixXd b;
     Eigen::MatrixXd y;
     Eigen::MatrixXd K;
     Eigen::MatrixXd S;
@@ -27,9 +27,9 @@ public:
 
     ~ExtendedKalmanFilter();
 
-    void predictX(int u = 0);
+    void predictX(Eigen::MatrixXd &u);
 
-    void predict(int u = 0);
+    void predict(Eigen::MatrixXd &u);
 
     Eigen::MatrixXd logLikelihood();
 
