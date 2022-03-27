@@ -8,9 +8,8 @@
 # Instructions to Run the code
 
 ```
-
-g++ main.cpp kalman.cpp tracking.cpp measurement.cpp 
-./a.out
-
-
+mkdir build && cd build
+cmake ../
+make 
+./ekf
 ```
