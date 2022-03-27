@@ -73,6 +73,23 @@ void ExtendedKalmanFilter::predictUpdate(Eigen::MatrixXf &z,
     PPosterior = P;
 }
 
+void update(Eigen::MatrixXf &z,
+            void (*jacobian)(Eigen::MatrixXf &x,
+                             Eigen::MatrixXf &H),
+            void (*Hx)(Eigen::MatrixXf &x,
+                       Eigen::MatrixXf &predictedZ)){
+
+    jacobian(x, H);
+
+    Eigen::MatrixXf PHT = P * H.transpose();
+    S = H * PHT + R;
+
+    SI = S.inverse();
+    K = PHT * SI;
+
+
+}
+
 void ExtendedKalmanFilter::predictX(Eigen::MatrixXf &u) {
 
     x = F * x + B * u;
@@ -86,28 +103,3 @@ void ExtendedKalmanFilter::predict(Eigen::MatrixXf &u) {
     PPrior = P;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Created symlink /etc/systemd/system/multi-user.target.wants/wg-quick@wg0.service → /lib/systemd/system/wg-quick@.service.
