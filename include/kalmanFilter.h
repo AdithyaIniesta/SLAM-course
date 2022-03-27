@@ -23,7 +23,7 @@ class kalmanFilter
         kalmanFilter();
         ~kalmanFilter(){};
         Eigen::MatrixXd printMean(){std::cout <<"x = " << x << "\n"; return x;};
-        void printCov(){std::cout << "P = " << P << "\n"; };
+        Eigen::MatrixXd printCov(){std::cout << "P = " << P << "\n"; return P;};
         void calculateJacobian();
         void linearize();
         void update();
