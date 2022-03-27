@@ -2,5 +2,5 @@
 
 # Extended Kalman Filter
 
-![alt text](https://github.com/AdithyaIniesta/SLAM-course/master/output/images/uncertainity_ellipse?raw=true)
+![alt text](https://github.com/AdithyaIniesta/SLAM-course/master/output/images/uncertainity_ellipse.png?raw=true)
 
